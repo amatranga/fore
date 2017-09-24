@@ -4,10 +4,10 @@ A simple golf score card built using React
 
 # Table of Contents
 
-1. [Requirements](#Requirements)
-1. [Development](#Development)
-  1. [Installing Dependencies](#Installing-Dependencies)
-  1. [Running the App](#Running-the-App)
+1. Requirements
+1. Development
+  1. Installing Dependencies
+  1. Running the App
 
 ## Requirements
 
