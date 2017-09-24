@@ -66,6 +66,8 @@ When you are ready to create a pull request...
 ```
 git pull --rebase upstream master
 git commit
+```
+```
 git push origin/YOUR_BRANCH_NAME
 ```
 
