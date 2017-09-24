@@ -3,6 +3,7 @@ import RadioSelector from './RadioSelector';
 import PlayerNameInput from './PlayerNameInput';
 import ScoresTable from './ScoresTable';
 import RankingsTable from './RankingsTable';
+import Intermediary from './Intermediary';
 
 class ScoreCard extends React.Component {
   constructor(props) {
@@ -11,11 +12,14 @@ class ScoreCard extends React.Component {
       holes: [],
       numberOfPlayers: 0,
       playerNames: [],
-      radio: [1,2,3,4,5,6]
+      radio: [1,2,3,4,5,6],
+      totalScores: [],
+      allScores: []
     };
 
     this.handleSelection = this.handleSelection.bind(this);
     this.submitNames = this.submitNames.bind(this);
+    this.updatePlayerRankings = this.updatePlayerRankings.bind(this);
   }
 
   componentWillMount() {
@@ -31,6 +35,7 @@ class ScoreCard extends React.Component {
     this.setState({holes});
   }
 
+  // For RadioSelector component
   handleSelection(event) {
     event.preventDefault();
     this.setState({numberOfPlayers: event.target.value});
@@ -38,6 +43,11 @@ class ScoreCard extends React.Component {
 
   submitNames(playersArr) {
     this.setState({playerNames: playersArr});
+  }
+
+  updatePlayerRankings(scoresArr) {
+    let totalScores = scoresArr;
+    this.setState({totalScores});
   }
 
   render() {
@@ -62,11 +72,7 @@ class ScoreCard extends React.Component {
       );
     } else {
       return (
-        <div>
-          <ScoresTable playerNames={this.state.playerNames} holes={this.state.holes}/>
-          <hr />
-          <RankingsTable playerNames={this.state.playerNames}/>
-        </div>
+        <Intermediary playerNames={this.state.playerNames} holes={this.state.holes} totalScores={this.state.totalScores} updatePlayerRankings={this.updatePlayerRankings} />
       );
     }
   }
