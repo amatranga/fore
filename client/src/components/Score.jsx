@@ -8,7 +8,7 @@ class Score extends React.Component {
   }
 
   onChange(event) {
-    this.props.onChange(+event.target.value, this.props.idx)
+    this.props.onChange(+event.target.value, this.props.idx, this.props.playerId);
   }
 
   render() {
