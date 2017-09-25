@@ -47,12 +47,12 @@ class Player extends React.Component {
         let totalScoresBottom = this.props.totalScoresBottom[this.state.id];
       }
 
-      console.log(totalScoresTop, totalScoresBottom);
+      // console.log(totalScoresTop, totalScoresBottom);
       return (
         <tr>
           <th scope="row" id={this.state.id}>{this.state.id + 1}</th>
           <td>{this.state.name}</td>
-          <td>{totalScoresTop.totalScore + totalScoresBottom.totalScore || 0}</td>
+         
         </tr>
       );
     }
