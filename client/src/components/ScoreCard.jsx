@@ -10,8 +10,11 @@ class ScoreCard extends React.Component {
     super(props);
     this.state = {
       holes: [],
-      numberOfPlayers: 0,
-      playerNames: [],
+      numberOfPlayers: 2,
+      playerNames: [
+        {playerId: -2, playerName: 'yardages'},
+        {playerId: -1, playerName: 'par'}
+      ],
       radio: [1,2,3,4,5,6],
       totalScores: [],
       allScores: []
@@ -42,7 +45,8 @@ class ScoreCard extends React.Component {
   }
 
   submitNames(playersArr) {
-    this.setState({playerNames: playersArr});
+    let playerNames = this.state.playerNames.concat(playersArr);
+    this.setState({playerNames});
   }
 
   updatePlayerRankings(scoresArr) {
@@ -51,7 +55,7 @@ class ScoreCard extends React.Component {
   }
 
   render() {
-    if (this.state.numberOfPlayers === 0) {
+    if (this.state.numberOfPlayers === 2) {
       return (
         <div className="col">
           <form className="row justify-content-center">
@@ -64,7 +68,7 @@ class ScoreCard extends React.Component {
           </form>
         </div>
       );
-    } else if (this.state.playerNames.length === 0) {
+    } else if (this.state.playerNames.length === 2) {
       return (
         <div className="col">
           <PlayerNameInput submitNames={this.submitNames} numberOfPlayers={this.state.numberOfPlayers} />
