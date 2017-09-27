@@ -1,6 +1,6 @@
 import React from 'react';
 import ScoresTable from './ScoresTable';
-import RankingsTable from './RankingsTable';
+// import RankingsTable from './RankingsTable';
 
 class Intermediary extends React.Component {
   constructor(props) {
@@ -14,9 +14,14 @@ class Intermediary extends React.Component {
   render() {
     return (
       <div>
+        <div className="row">
+          <div className="col text-center">
+            <h1>Fore!</h1>
+          </div>
+        </div>
         <ScoresTable playerNames={this.props.playerNames} holes={this.props.holes} updatePlayerRankings={this.props.updatePlayerRankings} />
         <hr />
-        <RankingsTable playerNames={this.props.playerNames} totalScoresTop={this.state.totalScoresTop} totalScoresBottom={this.state.totalScoresBottom} />
+        
       </div>
     );
   }
