@@ -34,7 +34,7 @@ class Intermediary extends React.Component {
 
   componentDidUpdate() {
     let totalScores = this.props.totalScores;
-    console.log(totalScores[0], 'totalScores');
+    // console.log(totalScores[0], 'totalScores');
     let totalScoresTop = [];
     let totalScoresBottom = [];
     for (let i = 0; i < totalScores[0].top.length; i++) {

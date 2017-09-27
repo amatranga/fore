@@ -7,7 +7,7 @@ class RankingsTable extends React.Component {
   }
 
   render() {
-    console.log(this.props, 'props in RankingsTable');
+    // console.log(this.props, 'props in RankingsTable');
     return (
       <div>
         <table className="table table-striped table-bordered table-sm">
@@ -26,11 +26,6 @@ class RankingsTable extends React.Component {
         </table>
       </div>
     );
-  }
-
-  componentDidUpdate() {
-    let totalScores = this.props.totalScores;
-    console.log(totalScores, 'totalScores in RankingsTable');
   }
 }
 

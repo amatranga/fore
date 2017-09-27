@@ -38,7 +38,7 @@ class ScoresTable extends React.Component {
   }
   
   // shouldComponentUpdate(nextProps, nextState) {
-  //   // console.log(nextState, 'nextState =============== \n', this.state, 'current state');
+  //   console.log(nextState, 'nextState =============== \n', this.state, 'current state');
   //   let curScoresTop = JSON.stringify(this.state.scoreTableTop);
   //   let curScoresBottom = JSON.stringify(this.state.scoreTableBottom)
   //   let nextScoresTop = JSON.stringify(nextState.scoreTableTop);
