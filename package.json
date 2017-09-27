@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "build:watch": "webpack --watch",
-    "start": "nodemon server/index.js",
+    "start": "webpack & node server/index.js",
     "test": ""
   },
   "author": "amatranga",
